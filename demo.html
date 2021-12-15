@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<script>
+(function (d,k) {
+var s = d.createElement('script');
+s.type = 'text/javascript';
+s.async = true;
+s.src = 'https://plugins-media.makeupar.com/c42326/sdk.js?apiKey=' + k;
+var x = d.getElementsByTagName('script')[0];
+x.parentNode.insertBefore(s, x);
+})(document, '7v6KjE83eQRr5yBHJwWqQ');
+</script>
+<div id="YMK-module"></div> <!--loads up the iframe-->
+<script>
+
+ var yc_event_id;
+  window.ymkAsyncInit = function () {
+
+     window.YMK.init({
+
+    autoOpen: false,
+
+    // disableLiveMode: true,
+
+    enableFourway: true,
+
+    fourWayMode: 'auto',
+
+    skinSmoothStrength: 50,
+
+    language: 'en',
+
+    height: 600,
+
+    width: 600
+
+    });
+
+    window.YMK.addEventListener('opened', function() {
+
+        document.body.appendChild(document.createTextNode('opened event triggered'));
+
+        document.body.appendChild(document.createElement('br'));
+
+    });
+
+    window.YMK.addEventListener('cameraFailed', function() {
+
+document.body.appendChild(document.createTextNode('camera failed triggered'));
+
+document.body.appendChild(document.createElement('br'));
+
+});
+
+
+
+    window.YMK.addEventListener('loaded', function() {
+
+        document.body.appendChild(document.createTextNode('loaded event triggered'));
+
+        document.body.appendChild(document.createElement('br'));
+
+    });
+
+
+
+    // window.YMK.addEventListener('launcherPageEntered', function() {
+
+    //   console.log('launcher triggered');
+
+    // document.body.appendChild(document.createTextNode('launcher triggered'));
+
+    //     document.body.appendChild(document.createElement('br'));
+
+    // });
+
+  }
+
+</script>
+
+<br/>
+
+<button onclick="YMK.applyMakeupBySku('LIP_COLOR_01_02')"> <!-- Change the GUID/SKU ID in the '' with the products available in the console -->
+
+Apply Lipstick 2</button>
+
+<button onclick="YMK.applyMakeupBySku('LIP_COLOR_01_04')">
+
+Apply Lipstick 4</button>
+
+<button onclick="YMK.applyMakeupBySku('EYE_SHADOW_01_05')">Apply Eyeshadow</button>
+
+<button onclick="YMK.open()">Open YouCam</button>
+
+<button onclick="YMK.close()">Close YouCam</button>
+
+<button onclick="YMK.closeEngine()">Back to Launcher</button>
+
+<button onclick="YMK.applyMakeupBySku('EYE_LINER_01_03')">Apply Eye Liner</button>
+
+<!--button onclick="YMK.applyMakeupBySku('BLUSH_01_03', 0)">Apply Blush1</button>
+
+<button onclick="YMK.applyMakeupBySku('BLUSH_01_03', 1)">Apply Blush2</button-->
+
+<button onclick="YMK.applyMakeupBySku('EYELASHES_01_04')">Apply Mascara</button>
+
+<button onclick="YMK.applyMakeupBySku('EYE_CONTACT_01_02')">Apply Eyecontact</button>
+
+<button onclick="YMK.setIntensity(20)">Lower intensity of latest effect</button>
+
+<button onclick="YMK.disableCompare()">Disable Compare</button>
+
+<button onclick="YMK.enableCompare()">Enable Compare</button>
+<button onclick="YMK.reset()">Remove makeup effects</button>
+
+<br/>
+
+</body>
+
+</html>
