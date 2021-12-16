@@ -16,7 +16,8 @@ x.parentNode.insertBefore(s, x);
 <script>
 
 function start(h, w) {
- var yc_event_id;
+ try {
+  var yc_event_id;
   window.ymkAsyncInit = function () {
 
      window.YMK.init({
@@ -49,11 +50,11 @@ function start(h, w) {
 
     window.YMK.addEventListener('cameraFailed', function() {
 
-document.body.appendChild(document.createTextNode('camera failed triggered'));
+    document.body.appendChild(document.createTextNode('camera failed triggered'));
 
-document.body.appendChild(document.createElement('br'));
+    document.body.appendChild(document.createElement('br'));
 
-});
+    });
 
 
 
@@ -78,6 +79,9 @@ document.body.appendChild(document.createElement('br'));
     // });
 
   }
+ } catch(error) {
+  console.error(error);
+ }
 }
 
 
