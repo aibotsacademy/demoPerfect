@@ -14,13 +14,13 @@ x.parentNode.insertBefore(s, x);
 </script>
 <div id="YMK-module"></div> <!--loads up the iframe-->
 <script>
-
+ var yc_event_id;
+ 
 function start(h, w) {
  try {
-  var yc_event_id;
   window.ymkAsyncInit = function () {
 
-     window.YMK.init({
+    window.YMK.init({
 
     autoOpen: true,
 
