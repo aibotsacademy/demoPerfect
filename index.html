@@ -15,6 +15,7 @@ x.parentNode.insertBefore(s, x);
 <div id="YMK-module"></div> <!--loads up the iframe-->
 <script>
 
+function start(h, w) {
  var yc_event_id;
   window.ymkAsyncInit = function () {
 
@@ -32,9 +33,9 @@ x.parentNode.insertBefore(s, x);
 
     language: 'en',
 
-    height: 600,
+    height: h,
 
-    width: 300
+    width: w
 
     });
 
@@ -77,6 +78,8 @@ document.body.appendChild(document.createElement('br'));
     // });
 
   }
+}
+
 
 </script>
 
