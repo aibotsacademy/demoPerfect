@@ -18,50 +18,51 @@
       var yc_event_id;
        
       function start(h, w) {
-        console.log("Ready2");
-        //window.ymkAsyncInit = function () {
-          try {
-            window.YMK.init({
-              autoOpen: true,
-              // disableLiveMode: true,
-              enableFourway: true,
-              fourWayMode: 'auto',
-              skinSmoothStrength: 50,
-              language: 'en',
-              height: parseInt(h),
-              width: parseInt(w)
-            });
+        console.log("Ready3");
+        try {
+          window.YMK.init({
+            autoOpen: true,
+            // disableLiveMode: true,
+            enableFourway: true,
+            fourWayMode: 'auto',
+            skinSmoothStrength: 50,
+            language: 'en',
+            height: parseInt(h),
+            width: parseInt(w)
+          });
 
-            window.YMK.addEventListener('opened', function() {
-              document.body.appendChild(document.createTextNode('opened event triggered'));
-              document.body.appendChild(document.createElement('br'));
-            });
+          window.YMK.addEventListener('opened', function() {
+            document.body.appendChild(document.createTextNode('opened event triggered'));
+            document.body.appendChild(document.createElement('br'));
+          });
 
-            window.YMK.addEventListener('cameraFailed', function() {
-              document.body.appendChild(document.createTextNode('camera failed triggered'));
-              document.body.appendChild(document.createElement('br'));
-            });
+          window.YMK.addEventListener('cameraFailed', function() {
+            document.body.appendChild(document.createTextNode('camera failed triggered'));
+            document.body.appendChild(document.createElement('br'));
+          });
 
-            window.YMK.addEventListener('loaded', function() {
-              document.body.appendChild(document.createTextNode('loaded event triggered'));
-              document.body.appendChild(document.createElement('br'));
-            });
+          window.YMK.addEventListener('loaded', function() {
+            document.body.appendChild(document.createTextNode('loaded event triggered'));
+            document.body.appendChild(document.createElement('br'));
+          });
 
-          // window.YMK.addEventListener('launcherPageEntered', function() {
-          //  console.log('launcher triggered');
-          //  document.body.appendChild(document.createTextNode('launcher triggered'));
-          //  document.body.appendChild(document.createElement('br'));
-          // });
-          } catch(error) {
-            console.error(error);
-          }
-        //}
+        // window.YMK.addEventListener('launcherPageEntered', function() {
+        //  console.log('launcher triggered');
+        //  document.body.appendChild(document.createTextNode('launcher triggered'));
+        //  document.body.appendChild(document.createElement('br'));
+        // });
+        } catch(error) {
+          console.error(error);
+        }
       }
     </script>
 
     <script>
       function testEcho(message){
         console.log(message);
+      }
+      function applyMakeup(name){
+        YMK.applyMakeupBySku(name);
       }
     </script>
 
