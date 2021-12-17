@@ -10,7 +10,7 @@
         s.async = true;
         s.src = 'https://plugins-media.makeupar.com/c42326/sdk.js?apiKey=' + k;
         var x = d.getElementsByTagName('script')[0];
-        //x.parentNode.insertBefore(s, x);
+        x.parentNode.insertBefore(s, x);
       })(document, '7v6KjE83eQRr5yBHJwWqQ');
     </script>
     <div id="YMK-module"></div> <!--loads up the iframe-->
@@ -64,7 +64,7 @@
         YMK.applyMakeupBySku(name);
       }
       function version(){
-        console.log("1.0.0");
+        console.log("1.0.1");
       }
     </script>
 
