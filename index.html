@@ -18,6 +18,7 @@
       var yc_event_id;
        
       function start(h, w) {
+        console.log("Ready3");
         try {
           window.YMK.init({
             autoOpen: true,
@@ -31,18 +32,21 @@
           });
 
           window.YMK.addEventListener('opened', function() {
-            document.body.appendChild(document.createTextNode('opened event triggered'));
-            document.body.appendChild(document.createElement('br'));
+            console.log("opened event triggered");
+            /*document.body.appendChild(document.createTextNode('opened event triggered'));
+            document.body.appendChild(document.createElement('br'));*/
           });
 
           window.YMK.addEventListener('cameraFailed', function() {
-            document.body.appendChild(document.createTextNode('camera failed triggered'));
-            document.body.appendChild(document.createElement('br'));
+            console.log("camera failed triggered");
+            /*document.body.appendChild(document.createTextNode('camera failed triggered'));
+            document.body.appendChild(document.createElement('br'));*/
           });
 
           window.YMK.addEventListener('loaded', function() {
-            document.body.appendChild(document.createTextNode('loaded event triggered'));
-            document.body.appendChild(document.createElement('br'));
+            console.log("loaded event triggered");
+            /*document.body.appendChild(document.createTextNode('loaded event triggered'));
+            document.body.appendChild(document.createElement('br'));*/
           });
 
         // window.YMK.addEventListener('launcherPageEntered', function() {
@@ -62,9 +66,6 @@
       }
       function applyMakeup(name){
         YMK.applyMakeupBySku(name);
-      }
-      function version(){
-        console.log("1.0.1");
       }
     </script>
 
