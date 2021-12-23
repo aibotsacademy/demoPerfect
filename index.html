@@ -21,6 +21,7 @@
         try {
           window.YMK.init({
             autoOpen: true,
+            // disableLiveMode: true,
             enableFourway: true,
             fourWayMode: 'auto',
             skinSmoothStrength: 50,
@@ -62,11 +63,11 @@
       function testEcho(message){
         console.log(message);
       }
-      function applyMakeup(name){
-        YMK.applyMakeupBySku(name);
+      function applyMakeup(name, pattern){
+        YMK.applyMakeupBySku(name, pattern);
       }
       function version(){
-        console.log("1.0.4");
+        console.log("1.0.5");
       }
     </script>
 
